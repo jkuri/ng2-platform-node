@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "name": "ng2-platform-node",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "description": "Universal (isomorphic) javascript support for Angular2",
+  "dependencies": {
+    "css": "^2.2.1",
+    "parse": "^1.9.2",
+    "preboot": "^4.5.2"
+  }
+}
