@@ -492,7 +492,12 @@ export class Parse5DomAdapter extends DomAdapter {
     }
   }
   setAttributeNS(_element: any, _ns: string, _attribute: string, _value: string) {
-    throw _notImplemented('setAttributeNS');
+    if (_attribute) {
+      _element.attribs[_attribute] = _value;
+      if (_attribute === 'class') {
+        _element.className = _value;
+      }
+    }
   }
   removeAttribute(element: any, attribute: string) {
     if (attribute) {

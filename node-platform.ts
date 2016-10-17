@@ -69,9 +69,8 @@ import {
 import * as fs from 'fs';
 
 // @internal
-
 class NodeResourceLoader implements ResourceLoader {
-  get(url: string): Promise<string> {
+  get(url: string): Promise<any> {
     return Promise.resolve(fs.readFileSync(url).toString());
   }
 }
