@@ -469,21 +469,21 @@ export class NodePlatform  {
 
         document = null;
         store.clear();
-        destroyApp = () => {
-          appRef.ngOnDestroy();
-          appRef = null;
-          destroyApp = null;
-        };
-        destroyModule = () => {
-          moduleRef.destroy();
-          moduleRef = null;
-          destroyModule = null;
-        };
-        if (config.asyncDestroy) {
-          setTimeout(() => destroyApp() && setTimeout(destroyModule, 1), 1);
-        } else {
-          destroyApp() && destroyModule();
-        }
+        // destroyApp = () => {
+        //   appRef.ngOnDestroy();
+        //   appRef = null;
+        //   destroyApp = null;
+        // };
+        // destroyModule = () => {
+        //   moduleRef.destroy();
+        //   moduleRef = null;
+        //   destroyModule = null;
+        // };
+        // if (config.asyncDestroy) {
+        //   setTimeout(() => destroyApp() && setTimeout(destroyModule, 1), 1);
+        // } else {
+        //   destroyApp() && destroyModule();
+        // }
 
         config.time && console.timeEnd('id: ' + config.id + ' serialize: ');
         // html = html.replace(new RegExp(_appId, 'gi'), appId);
